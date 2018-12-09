@@ -1,5 +1,5 @@
 {
-  "name": "process-config",
+  "name": "config-process",
   "version": "0.0.1",
   "description": "Simple light ts config lib with getters support",
   "main": "src/index.js",
