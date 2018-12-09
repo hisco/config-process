@@ -1,0 +1,5 @@
+{
+    "testKey" : "testProd",
+    "prodOnly" : "2",
+    "folderOnly" : "prod"
+}
