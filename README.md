@@ -4,7 +4,7 @@
 [![Build Status][travis-image]][travis-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
-`process-config` organizes hierarchical configurations for your app configurations.
+`config-process` organizes hierarchical configurations for your app configurations.
 Configure typescript projects, fullt support typescript interfaces.
 
 It lets you define a set of process configuration parameters, and extend them for different environments (development, qa, staging, production, etc.).
@@ -12,7 +12,7 @@ It lets you define a set of process configuration parameters, and extend them fo
 It plays nicely with any deployment mechanisem (docker , k8s , env vars , etc.. ), details in motivation section.
 
 #Features
-`process-config` comes with a basic implementation of configuration manager.
+`config-process` comes with a basic implementation of configuration manager.
 The configuration manager asynchronously loads plugins, each plugin uses different methods of configuration loading.
 
 This configuration manager:
@@ -23,7 +23,7 @@ This configuration manager:
  * Fully support asynchronous loading - perfect for fetching remote config from a remote server. 
  * Comes with some strong default to enable strong ease of use.
  * Tiny with zero dependencies.
- * Fully supports `dotenv` files so it's hassle free to move from `dotenv` to `process-config`
+ * Fully supports `dotenv` files so it's hassle free to move from `dotenv` to `config-process`
 
 # Configuration load order ≠ hierarchy
 Configuration load order can influence on if/which next configuration loader will be used.
@@ -39,7 +39,7 @@ It's encourged that all plugins made to use this approach.
 
 Example:
 ```ts
-  import { ProcessConfig } from 'process-config'
+  import { ProcessConfig } from 'config-process'
   
   const config = new ProcessConfig({
     envKey : 'YOU_CUSTOM_KEY'
@@ -47,7 +47,7 @@ Example:
 ```
 
 #Simple - Default usage
-By default the `process-config` will try to use plugins by the following order:
+By default the `config-process` will try to use plugins by the following order:
  * env 
  * dotenv
  * fs
@@ -62,7 +62,7 @@ hierarchy:
   REQUEST_TIMEOUT=100 node server.js
 ```
 ```ts
-  const processConfig = require('process-config');
+  const processConfig = require('config-process');
 
   processConfig.get<number>('REQUEST_TIMEOUT' , 'number')
 ```
@@ -79,9 +79,9 @@ The most standard modules in the echo system has at least *one of the following 
 
   [MIT](LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/process-config.svg
-[npm-url]: https://npmjs.org/package/process-config
-[travis-image]: https://img.shields.io/travis/hisco/process-config/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/hisco/process-config
-[coveralls-image]: https://coveralls.io/repos/github/hisco/process-config/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/github/hisco/process-config?branch=master
+[npm-image]: https://img.shields.io/npm/v/config-process.svg
+[npm-url]: https://npmjs.org/package/config-process
+[travis-image]: https://img.shields.io/travis/hisco/config-process/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/hisco/config-process
+[coveralls-image]: https://coveralls.io/repos/github/hisco/config-process/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/hisco/config-process?branch=master

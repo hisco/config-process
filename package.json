@@ -31,10 +31,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/hisco/process-config.git"
+    "url": "https://github.com/hisco/config-process.git"
   },
   "bugs": {
-    "url": "https://github.com/hisco/process-config/issues"
+    "url": "https://github.com/hisco/config-process/issues"
   },
   "homepage": "https://github.com/hisco",
   "author": "Eyald <hisco@googlegroups.com‬>",
